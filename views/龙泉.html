@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>我的生活</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+		<link rel="stylesheet" type="text/css" href="../shou.css" />
+		<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+		<style type="text/css">
+			.content {
+				background-color: white;
+			}
+			
+			.buttons-tab .button {
+				padding: 0;
+				width: 12%;
+				margin: auto 4%;
+			}
+			
+			.h2hidden,
+			.spanbig {
+				display: block;
+				width: 60%;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			#tab5 .h2hidden,
+			#tab5 .spanbig {
+				width: auto;
+			}
+			
+			.spanbig {
+				width: 40%;
+				text-align: right;
+			}
+			
+			h3 {
+				margin: 3px;
+				height: 2rem;
+				color: black;
+				font-size: 0.9rem;
+				font-weight: 400;
+				position: relative;
+			}
+			
+			del {
+				color: gray;
+				font-size: 0.7rem;
+				padding-bottom: 5px;
+				position: absolute;
+				right: 0;
+				top: 1rem;
+			}
+			
+			.col-60 {
+				position: relative;
+			}
+			
+			.col-60 p,
+			.card p {
+				margin: 0;
+				font-size: 0.7rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.tab {
+				margin-top: 10px;
+			}
+			
+			.col-40 {
+				margin-top: 10px;
+			}
+			
+			.row {
+				padding: 0 1rem;
+				margin-top: 15px;
+			}
+			
+			.bar-tab {
+				height: 3rem;
+				line-height: 3rem;
+				background-color: gainsboro;
+				text-align: right;
+				position: fixed;
+				bottom: 0;
+			}
+			
+			.bar-tab img {
+				width: 1.5rem;
+				position: absolute;
+				top: -0.5rem;
+				left: 1rem;
+			}
+			
+			.badge {
+				position: absolute;
+				top: -0.8rem;
+				left: 1.7rem;
+				background-color: orange;
+				color: white;
+				display: none;
+			}
+			
+			.jiadiv {
+				width: 4rem;
+				position: absolute;
+				right: 0px;
+				bottom: -5px;
+				text-align: right;
+			}
+			
+			.jiadiv img {
+				width: 1.2rem;
+			}
+			
+			.money * {
+				background-color: gainsboro;
+			}
+			
+			.money {
+				text-align: left;
+				background-color: gainsboro;
+				width: 5rem;
+				margin-left: 2.5rem;
+				display: none;
+			}
+			
+			nav .spanbig,
+			nav .spansmall {
+				font-size: 1.5rem;
+				color: orangered;
+				display: inline;
+			}
+			
+			nav .spansmall {
+				font-size: 1rem;
+			}
+			
+			#buttongreen {
+				display: none;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				background-color: green;
+				padding: 0 20px;
+				color: white;
+			}
+			
+			.card {
+				margin: 0;
+				box-shadow: none;
+			}
+			
+			.card .row {
+				margin-top: 5px;
+			}
+			
+			.modal-button {
+				background: none;
+			}
+			
+			.modal-button-bold {
+				color: white;
+			}
+			
+			#cha {
+				border: 1px solid white;
+				border-radius: 50%;
+				padding: 5px;
+			}
+			
+			.modal-inner {
+				width: 15rem;
+				height: 15rem;
+				background-image: url(imgs/hahah.png);
+				background-size: 100% 100%;
+				border-radius: 10px;
+				left: calc(50% - 7.5rem);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="page-group">
+			<div class="page page-current">
+				<!-- 你的html代码 -->
+				<header class="bar bar-nav">
+					<img src="./imgs/电量条750白.png" />
+					<a class="icon icon-left pull-left back"></a>
+					<a class="icon icon-menu pull-right"></a>
+					<h1 class="title" style="width: 70%;left: 17%;border-radius: 40px;">
+  					<div class="searchbar" style="background: none;" >
+    					<a class="searchbar-cancel">取消</a>
+    					<div class="search-input">
+      					<label class="icon icon-search" for="search"></label>
+      					<input type="search" id='search' placeholder='输入关键字...'/>
+    					</div>
+  					</div>
+  				</h1>
+				</header>
+
+				<!--头部-->
+
+				<div class="content">
+					<img src="imgs/lmsnav.png" style="width: 100%;">
+
+					<!--标签页-->
+					<div class="buttons-tab fixed-tab" data-offset="44">
+						<a href="#tab1" class="tab-link active button">美食</a>
+						<a href="#tab2" class="tab-link button">娱乐</a>
+						<a href="#tab3" class="tab-link button">住宿</a>
+						<a href="#tab4" class="tab-link button">评论</a>
+						<a href="#tab5" class="tab-link button">租地</a>
+					</div>
+					<!--<div class="content-block">-->
+					<div class="tabs" style="padding-bottom: 3rem;">
+
+						<!--第一个页面-->
+						<div id="tab1" class="tab active">
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lms1.jpg" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+									<span class="h2hidden pull-left">农家菜烧牛肉</span>
+									<span class="spanbig pull-right">￥30.<span class="spansmall">70</span>
+									</span><br>
+									<del>￥47.50</del>
+								</h3>
+
+									<p>无农药，纯天然菜板</p>
+									<p>月销300 &#x3000;赞235</p>
+									<div class="jiadiv">
+										<img src="" class="jian tb1" />
+										<span id="num" style="margin: auto 2px;">
+									
+								</span>
+										<img src="imgs/jia.png" class="jia tb1" />
+									</div>
+
+								</div>
+							</div>
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lms2.jpg" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+									<span class="h2hidden pull-left">农家土鸡汤</span>
+									<span class="spanbig pull-right">￥46.<span class="spansmall">70</span>
+									</span><br>
+									<del></del>
+								</h3>
+
+									<p>正宗土鸡，肉质鲜美</p>
+									<p>月销300 &#x3000;赞235</p>
+									<div class="jiadiv">
+										<img src="" class="jian tb1" />
+										<span id="num" style="margin: auto 2px;">
+									
+								</span>
+										<img src="imgs/jia.png" class="jia tb1" />
+									</div>
+								</div>
+							</div>
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lms3.jpg" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+									<span class="h2hidden pull-left">红烧鸡肉</span>
+									<span class="spanbig pull-right">￥40.<span class="spansmall">50</span>
+									</span><br>
+									<del>￥47.50</del>
+								</h3>
+
+									<p>正宗土鸡，肉质鲜美</p>
+									<p>月销300 &#x3000;赞235</p>
+									<div class="jiadiv">
+										<img src="" class="jian tb1" />
+										<span id="num" style="margin: auto 2px;">
+									
+								</span>
+										<img src="imgs/jia.png" class="jia tb1" />
+									</div>
+
+								</div>
+							</div>
+							<nav class="bar bar-tab tb1">
+								<img src="imgs/shopgray.png" class="tb1" />
+								<span class="badge">1</span>
+								<span id="wenzi" style="background: none;font-size: 0.5rem;">
+							仅支持预约，暂无外送
+						</span>
+
+								<div class="tb1 money">
+									<span class="moneyspan">
+								<span class="spanbig"></span>
+									<span class="spansmall"></span>
+								</div>
+								<div id="buttongreen" class="pull-right">
+									去预约
+								</div>
+							</nav>
+						</div>
+
+						<div id="tab2" class="tab">
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lyl1.png" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+									<span class="h2hidden pull-left">农家菜烧牛肉</span>
+									<span class="spanbig pull-right">￥30.<span class="spansmall">70</span>
+									</span><br>
+									<del>￥47.50</del>
+								</h3>
+
+									<p>无农药，纯天然菜板</p>
+									<p>月销300 &#x3000;赞235</p>
+									<div class="jiadiv">
+										<img src="" class="jian tb2" />
+										<span class="num2" style="margin: auto 2px;">
+									
+								</span>
+										<img src="imgs/jia.png" class="jia tb2" />
+									</div>
+
+								</div>
+							</div>
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lyl2.png" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+									<span class="h2hidden pull-left">农家土鸡汤</span>
+									<span class="spanbig pull-right">￥46.<span class="spansmall">70</span>
+									</span><br>
+									<del></del>
+								</h3>
+
+									<p>正宗土鸡，肉质鲜美</p>
+									<p>月销300 &#x3000;赞235</p>
+									<div class="jiadiv">
+										<img src="" class="jian tb2" />
+										<span class="num2" style="margin: auto 2px;">
+									
+								</span>
+										<img src="imgs/jia.png" class="jia tb2" />
+									</div>
+								</div>
+							</div>
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lyl3.png" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+									<span class="h2hidden pull-left">红烧鸡肉</span>
+									<span class="spanbig pull-right">￥40.<span class="spansmall">50</span>
+									</span><br>
+									<del>￥47.50</del>
+								</h3>
+
+									<p>正宗土鸡，肉质鲜美</p>
+									<p>月销300 &#x3000;赞235</p>
+									<div class="jiadiv">
+										<img src="" class="jian tb2" />
+										<span class="num2" style="margin: auto 2px;">
+								</span>
+										<img src="imgs/jia.png" class="jia tb2" />
+									</div>
+
+								</div>
+							</div>
+							<nav class="bar bar-tab tb2">
+								<img src="imgs/shopgray.png" class="tb2" />
+								<span class="badge">1</span>
+
+								<span id="wenzi" style="background: none;font-size: 0.5rem;">
+							仅支持预约，暂无外送
+						</span>
+
+								<div class="tb2 money">
+									<span class="moneyspan">
+								<span class="spanbig"></span>
+									<span class="spansmall"></span>
+								</div>
+								<div id="buttongreen" class="pull-right">
+									去付款
+								</div>
+							</nav>
+						</div>
+
+						<div id="tab3" class="tab">
+							<div class="card demo-card-header-pic">
+								<div valign="bottom" class="card-header color-white no-border no-padding">
+									<img class='card-cover' src="imgs/lzs1.png" alt="">
+								</div>
+								<div class="card-content">
+									<div class="card-content-inner row">
+										<div class="col-60">
+											<p style="margin: 0;">山庄一楼大床房，朝南坐北，早餐好吃要多吃点</p>
+											<span style="color: green;font-size: 0.6rem;">4.8分</span> &nbsp;
+											<span style="color: gainsboro;">
+											556条评论·1居/宜住3人
+										</span>
+										</div>
+										<div class="col-40" style="padding: 0;text-align: right;">
+											<span style="color: orange;font-size: 1.2rem;">￥203.<span style="color: orange;font-size: 0.5rem;">00</span></span>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+							<div class="card demo-card-header-pic" style="margin-top: 2rem;">
+								<div valign="bottom" class="card-header color-white no-border no-padding">
+									<img class='card-cover' src="imgs/lzs2.png" alt="">
+								</div>
+								<div class="card-content">
+									<div class="card-content-inner row">
+										<div class="col-60">
+											<p style="margin: 0;">山庄一楼大床房，朝南坐北，早餐好吃要多吃点</p>
+											<span style="color: green;font-size: 0.6rem;">4.8分</span> &nbsp;
+											<span style="color: gainsboro;">
+											556条评论·1居/宜住3人
+										</span>
+										</div>
+										<div class="col-40" style="padding: 0;text-align: right;">
+											<span style="color: orange;font-size: 1.2rem;">￥203.<span style="color: orange;font-size: 0.5rem;">00</span></span>
+
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div id="tab4" class="tab">
+							<div class="content-block">
+								<p>想评价，没门</p>
+							</div>
+						</div>
+						<div id="tab5" class="tab">
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lzd1.png" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+								<span class="h2hidden pull-left">粗菜地</span>
+								<span class="spanbig pull-right">￥999.<span class="spansmall">00/月</span>
+								</span>
+								</h3>
+
+									<p>无农药，纯天然菜板</p>
+									<p>月销300 &#x3000;赞235</p>
+
+								</div>
+							</div>
+
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lzd2.png" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+								<span class="h2hidden pull-left">粗菜地</span>
+								<span class="spanbig pull-right">￥40.<span class="spansmall">00/条</span>
+								</span>
+								</h3>
+
+									<p>无农药，纯天然菜板</p>
+									<p>月销300 &#x3000;赞235</p>
+
+								</div>
+							</div>
+
+							<div class="row" style="text-align: left;">
+								<div class="col-40">
+									<img src="imgs/lzd3.png" style="width: 100%" />
+								</div>
+								<div class="col-60">
+									<h3>
+								<span class="h2hidden pull-left">家禽养殖</span>
+								<span class="spanbig pull-right">￥40.<span class="spansmall">00/只</span>
+								</span>
+								</h3>
+
+									<p>无农药，纯天然菜板</p>
+									<p>月销300 &#x3000;赞235</p>
+
+								</div>
+							</div>
+							<nav class="bar bar-tab tb1">
+								<img src="imgs/shopgray.png" class="tb1" />
+								<span id="wenzi" style="background: none;font-size: 0.5rem;">
+							目前仅支持线下交易，联系电话：4000791225
+						</span>
+							</nav>
+						</div>
+
+					</div>
+					<!--</div>-->
+
+				</div>
+			</div>
+		</div>
+		<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+
+		<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type="text/javascript">
+			var jias = document.querySelectorAll('#tab1 .jia');
+			var count = 0;
+			for(let i = 0; i < jias.length; i++) {
+				jias[i].onclick = function() {
+					var srcs = document.querySelectorAll('.jian')[i].src;
+					var nos = srcs.indexOf('imgs/jian.png');
+					//拿价格
+					var money = document.querySelectorAll('.spanbig')[i].innerText.slice(1) * 1;
+					count += money;
+					if(nos == '-1') {
+						document.querySelectorAll('.jian')[i].src = '../imgs/jian.png';
+						document.querySelectorAll('#num')[i].innerHTML = 1;
+						add1('tb1', count)
+					} else {
+						document.querySelector('#tab1 .badge').innerHTML = document.querySelector('#tab1 .badge').innerHTML * 1 + 1;
+
+						var nums = document.querySelectorAll('#num')[i].innerHTML * 1 + 1;
+						document.querySelectorAll('#num')[i].innerHTML = nums;
+						document.querySelector('nav.tb1 .spanbig').innerHTML = Math.floor(count);
+						//小数点处理
+						add2('tb1', count)
+					}
+				}
+			}
+
+			//减号店家
+			var jians = document.querySelectorAll('.jian');
+			for(let i = 0; i < jias.length; i++) {
+				jians[i].onclick = function() {
+					document.querySelector('#tab1 .badge').innerHTML = document.querySelector('#tab1 .badge').innerHTML * 1 - 1;
+
+					var nums = document.querySelectorAll('#num')[i].innerHTML - 1;
+					var money = document.querySelectorAll('.spanbig')[i].innerText.slice(1) * 1;
+					count -= money;
+
+					if(nums > 0) {
+						document.querySelectorAll('#num')[i].innerHTML = nums;
+					} else if(nums == 0) {
+						document.querySelectorAll('#num')[i].innerHTML = '';
+						document.querySelectorAll('.jian')[i].src = '';
+					}
+					jianhao('tb1', count)
+
+				}
+			}
+
+			var jias2 = document.querySelectorAll('#tab2 .jia');
+			var count2 = 0;
+			for(let i = 0; i < jias2.length; i++) {
+				jias2[i].onclick = function() {
+					var srcs = document.querySelectorAll('#tab2 .jian')[i].src;
+					var nos = srcs.indexOf('imgs/jian.png');
+					//拿价格
+					var money = document.querySelectorAll('#tab2 .spanbig')[i].innerText.slice(1) * 1;
+					count2 += money;
+					if(nos == '-1') {
+						document.querySelectorAll('#tab2 .jian')[i].src = '../imgs/jian.png';
+						document.querySelectorAll('.num2')[i].innerHTML = 1;
+						add1('tb2', count2)
+					} else {
+						document.querySelector('#tab2 .badge').innerHTML = document.querySelector('#tab2 .badge').innerHTML * 1 + 1;
+
+						var nums = document.querySelectorAll('.num2')[i].innerHTML * 1 + 1;
+						document.querySelectorAll('.num2')[i].innerHTML = nums;
+						document.querySelector('nav.tb2 .spanbig').innerHTML = Math.floor(count2);
+						//小数点处理
+						add2('tb2', count2)
+					}
+				}
+			}
+
+			//减号店家
+			var jians2 = document.querySelectorAll('#tab2 .jian');
+			for(let i = 0; i < jians2.length; i++) {
+				jians2[i].onclick = function() {
+					document.querySelector('#tab2 .badge').innerHTML = document.querySelector('#tab2 .badge').innerHTML * 1 - 1;
+
+					var nums = document.querySelectorAll('.num2')[i].innerHTML - 1;
+					var money = document.querySelectorAll('#tab2 .spanbig')[i].innerText.slice(1) * 1;
+					count2 -= money;
+
+					if(nums > 0) {
+						document.querySelectorAll('.num2')[i].innerHTML = nums;
+					} else if(nums == 0) {
+						document.querySelectorAll('.num2')[i].innerHTML = '';
+						document.querySelectorAll('#tab2 .jian')[i].src = '';
+					}
+					jianhao('tb2', count2)
+
+				}
+			}
+
+			function add1(a, num) {
+
+				document.querySelector('nav.' + a + ' .badge').style.display = 'block';
+				document.querySelector('nav.' + a + ' .money').style.display = 'block';
+				document.querySelector('nav.' + a + ' #buttongreen').style.display = 'block';
+				document.querySelector('nav.' + a + ' #wenzi').innerHTML = '';
+				document.querySelector('nav .' + a).src = '../imgs/shopgreen.png';
+				//放价格
+				document.querySelector('nav.' + a + ' .spanbig').innerHTML = Math.floor(num);
+				document.querySelector('nav.' + a + ' .spansmall').innerHTML = String(num.toFixed(1)).slice(-2) + '0'
+			}
+
+			function add2(a, num) {
+
+				if(String(count).indexOf('.') == -1 || count < 0) {
+					document.querySelector('nav.' + a + ' .spansmall').innerHTML = '.00';
+				} else {
+
+					document.querySelector('nav.' + a + ' .spansmall').innerHTML = String(num.toFixed(1)).slice(-2) + '0'
+
+				}
+			}
+			//减号的
+			function jianhao(a, num) {
+				if(Math.floor(num) <= 0) {
+					document.querySelector('nav.' + a + ' .spanbig').innerHTML = 0;
+				} else {
+					document.querySelector('nav.' + a + ' .spanbig').innerHTML = Math.floor(num);
+				}
+
+				if(String(num).indexOf('.') == -1 || String(num).indexOf('.0') == 1) {
+					document.querySelector('nav.' + a + ' .spansmall').innerHTML = '.00';
+				} else {
+					document.querySelector('nav.' + a + ' .spansmall').innerHTML = String(num.toFixed(1)).slice(-2) + '0'
+				}
+				console.log(document.querySelector('nav.' + a + ' .spanbig').innerHTML)
+				if(document.querySelector('nav.' + a + ' .spanbig').innerHTML == 0.0) {
+					count = 0;
+					console.log(1)
+					document.querySelector('nav .' + a).src = '../imgs/shopgray.png';
+					document.querySelector('nav.' + a + ' .money').style.display = 'none';
+					document.querySelector('nav.' + a + ' #buttongreen').style.display = 'none';
+					document.querySelector('nav.' + a + ' #wenzi').innerHTML = '仅支持预约，暂无外送';
+
+				}
+			}
+			$(function() {
+				$.alert('');
+				document.querySelector('.modal-button-bold').innerHTML = '<span id="cha">X</span>'
+
+			})
+		</script>
+
+	</body>
+
+</html>

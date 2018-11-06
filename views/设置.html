@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mine.css"/>
+	<link rel="stylesheet" type="text/css" href="css/yhk.css"/>
+    
+
+  </head>
+  <body>
+	<div class="page-group">
+		<div class="page" id="setting">
+			<header class="bar bar-nav">
+				<a class="icon icon-left pull-left back"></a>
+				<!--<a class="icon pull-right" href="#" style="font-size: 38px;;">+</a>-->
+				<h1 class="title">设置</h1>
+			</header>
+			<div class="content">
+				<div class="list-block">
+					<ul>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title sets"></div>
+								<div class="item-after">
+									<div class="item-input">
+						              <label class="label-switch">
+						                <input type="checkbox" checked>
+						                <div class="checkbox"></div>
+						              </label>
+						            </div>
+								</div>
+							</div>
+						</li>
+						<li class="item-content">
+							<div class="item-inner">
+								<div class="item-title sets"></div>
+								<div class="item-after">
+									<div class="item-input">
+						              <label class="label-switch">
+						                <input type="checkbox">
+						                <div class="checkbox"></div>
+						              </label>
+						            </div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list-block">
+					<ul>
+						<li class="item-content item-link">
+							<div class="item-inner">
+								<div class="item-title sets"></div>
+								<div class="item-after"></div>
+							</div>
+						</li>
+						<li class="item-content item-link">
+							<div class="item-inner">
+								<div class="item-title sets"></div>
+								<div class="item-after" style="color: #bbb;">当前缓存&nbsp;26.5M</div>
+							</div>
+						</li>
+						<li class="item-content item-link">
+							<div class="item-inner">
+								<div class="item-title sets"></div>
+								<div class="item-after"></div>
+							</div>
+						</li>
+						<li class="item-content item-link">
+							<div class="item-inner">
+								<div class="item-title sets"></div>
+								<div class="item-after" style="color: #bbb;">当前缓存&nbsp;V2.1.4</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="content-block" style="margin: 0.75rem 0;">
+					<p><a href="../login.html" class=" external button button-fill button-success" style="height: 2rem; line-height: 2rem;">退出登录</a></p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+	<script type="text/javascript">
+			var str=['省流量模式','仅wifi下显示图片','消息设置','清除缓存','关于我们','版本检测'];
+			$('.sets').each(function(index,item){
+	//			console.log(item)
+				$(item).text(str[index]);
+			})
+		</script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+  </body>
+</html>
+

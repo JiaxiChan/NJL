@@ -1,0 +1,45 @@
+
+/*银行卡的css*/
+.card-content{
+	height: 9rem;
+	position: relative;
+}
+.item-tp img{
+	height: 3rem;
+	width: 3rem;
+	display: inline-block;
+	position: absolute;
+	top: 1.2rem;
+	left: 1.2rem;
+}
+.item-tp div{
+	display: inline-block;
+	position: absolute;
+	top: 1.2rem;
+	left: 5.5rem;
+}
+.item-tp div p{
+	font-size: 18px;
+	margin: 5px 0;
+	color: black;
+}
+span{
+	color: #ccc;
+}
+small{
+	color: #ccc;
+	font-style: italic;
+	margin-left: 0.5rem;
+}
+
+.item-kh{
+	position: absolute;
+	top: 5.5rem;
+	left: 1.2rem;
+	font-size: 20px;
+}
+.item-rq{
+	position: absolute;
+	top: 7rem;
+	left: 1.2rem;
+}

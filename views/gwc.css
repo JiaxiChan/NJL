@@ -1,0 +1,162 @@
+
+  				div.buyList{
+  					height: 130px;
+  					margin: 20px 0;
+  				}
+  				div.buyLeft{
+  					float: left;
+  				}
+  				div.buyRight{
+  					float: right;
+  					width: calc(100% - 108px);
+  				}
+  				img{
+  					border-radius: 10px;
+  				}
+  				div.buyList h3{
+  					margin: 0;
+  					/*font-weight: 400;*/
+  					font-size: 16px;
+  				}
+  				div.buyList p{
+  					margin: 5px 0;
+  					font-size: 13px;
+  					color: #999;
+  					line-height: 18px;
+  				}
+  				div.price{
+  					font-size: 23px;
+  					color: darkorange;
+  				}
+  				div.content-block{
+  					margin: 20px 0;
+  					position: relative;
+  				}
+  				div.content-block div.content-block{
+  					padding: 0;
+  				}
+  				a.gwc{
+  					color: #fff;
+  					background-color: yellowgreen;
+  					width: 50px;
+  					height: 50px;
+  					border-radius: 50%;
+  					position: fixed;
+  					left: 10px;
+  					bottom: 3px;
+  					font-size: 30px;
+  					text-align: center;
+  				}
+  				span.badgegwc{
+  					display: block;
+  					position: absolute;
+  					background-color: darkorange;
+  					color: #fff;
+  					border-radius: 50%;
+  					right: 0;
+  					top: 0;
+  					width: 17px;
+  					height: 17px;
+  					font-size: 12px;
+  				}
+
+
+div#gwc div.contentadd{
+	background-color: #fff;
+	height: 10vh;
+	line-height: 10vh;
+	padding: 0 3vw;
+}
+
+div.content2{
+	background-color: #fff;
+	height: 25vh;
+	margin-top: 12vh;
+	padding: 1vh 3vw;
+	overflow: hidden;
+}
+div.content2 img{
+	width: 15vh;
+	height: 15vh;
+	position: relative;
+}
+div.content2 p{
+	margin: 0;
+}
+div.count{
+	display: inline-block;
+	float: right;
+	font-size: 6vw;
+}
+div.count a{
+	border: 1px solid #999;
+	display: inline-block;
+	border-radius: 50%;
+	width: 5vh;
+	height: 5vh;
+	text-align: center;
+	line-height: 5vh;
+	font-size: 4vh;
+}
+
+div.content3{
+	position: fixed;
+	bottom: 0;
+	height: 8vh;
+	background-color: white;
+	width: 100%;
+	line-height: 8vh;
+	color: #999;
+	padding: 0 3vw;
+}
+a.select{
+	position: absolute;
+	left: 1.5vh;
+	width: 3vh;
+	height: 3vh;
+	background-color: darkorange;
+	border-radius: 50%;
+	top: calc(50% - 1.5vh);
+	color: #fff;
+	text-align: 3vh;
+	font-size: 2vh;
+	text-align: center;
+}
+a.num{
+	font-size: 16px !important;
+}
+div.choose{
+	margin-top: 2vh;
+	background-color: #fff;
+	position: relative;
+	padding: 1vh 1rem;
+	height: 10vh;
+	padding-left: 20vw;
+	font-size: 3vh;
+}
+div.right{
+	position: absolute;
+	right: 4vw;
+	border: 1px solid darkorange;
+	border-radius: 50%;
+	top: 4vh;
+	height: 3vh;
+	width: 3vh;
+	text-align: center;
+	line-height: 3vh;
+}
+.chose{
+	background-color: darkorange;
+	color: #fff;
+}
+a.all{
+	display: block;
+	float: left;
+	text-align: center;
+	margin: 2vw;
+}
+.all img{
+	border-radius: 2vw;
+	width: 40vw;
+	height: 40vw;
+}

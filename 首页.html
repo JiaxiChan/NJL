@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>我的生活</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
+		<link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+		<link rel="stylesheet" type="text/css" href="shou.css" />
+		<link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
+	</head>
+
+	<body>
+		<div class="page-group">
+			<div class="page page-current">
+				<!-- 你的html代码 -->
+				<header class="bar bar-nav">
+					<img src="./imgs/电量条750白.png" />
+				</header>
+
+				<nav class="bar bar-tab">
+					<a class="tab-item external active" href="#">
+						<span class="icon icon-home"></span>
+						<span class="tab-label">乌托邦</span>
+					</a>
+					<a class="tab-item external" href="农场.html">
+						<span class="icon icon-me"></span>
+						<span class="tab-label">牧场</span>
+					</a>
+					<a class="tab-item external" href="农友圈.html">
+						<span class="icon icon-star"></span>
+						<span class="tab-label">农友圈</span>
+					</a>
+					<a class="tab-item external" href="mine.html">
+						<span class="icon icon-cart"></span>
+						<span class="tab-label">我的</span>
+					</a>
+				</nav>
+
+				<div class="content">
+					<div class="row">
+						<!--<div class="">-->
+						<div class="bar bar-header-secondary col-25">
+							<div class="searchbar">
+								<img src="imgs/GPS.png" style="height: 80%;width: auto;">
+								<span id="city" class="content-padded" >
+									福州
+									<span class="icon icon-down"></span>
+								</span>
+
+							</div>
+						</div>
+						<!--<div class="">-->
+						<div class="bar bar-header-secondary col-70" id="position">
+							<div class="searchbar searchbar2">
+								<div class="search-input">
+									<label class="icon icon-search" for="search"></label>
+									<input type="search" id='search' placeholder='福龙龙泉山庄' style="background-color: rgba(255,255,255,0.76);" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--</div>-->
+					<!--图片轮播-->
+					<!-- Slider -->
+					<div class="swiper-container swiper-container1" data-space-between='10' data-autoplay="2000" data-loop="true">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="imgs/梦之原野.png" alt=""></div>
+
+							<div class="swiper-slide"><img src="imgs/bg-nav-2.jpg" alt=""></div>
+						</div>
+					</div>
+
+					<!--六个模块-->
+					<div class="content-block row" style="margin-top: -30px;">
+						<div class="col-33">
+							<a class="external" href="views/goodfood.html">
+								<img src="imgs/美食.png" /><br> 美食
+							</a>
+						</div>
+						<div class="col-33">
+							<a class="external" href="views/yl_zy.html">
+								<img src="imgs/娱乐.png" /><br> 娱乐
+							</a>
+						</div>
+						<div class="col-33">
+							<a class="external" href="./views/jingdian.html">
+								<img src="imgs/景点.png" /><br> 景点
+							</a>
+						</div>
+					</div>
+					<div class="content-block row">
+						<div class="col-33">
+							<a class="external" href="民宿.html">
+								<img src="imgs/民宿.png" /><br> 民宿
+							</a>
+						</div>
+						<div class="col-33">
+							<a class="external" href="views/cz_zy.html">
+								<img src="imgs/草采摘.png" /><br> 采摘
+							</a>
+						</div>
+						<div class="col-33">
+							<a class="external" href="views/xg_list.html">
+								<img src="imgs/选购.png" /><br> 选购
+							</a>
+						</div>
+					</div>
+
+					<div class="content-block" style="margin-top: 20px;text-align: center;">
+						<a class="external" href="views/龙泉.html">
+							<img src="./imgs/热门推荐.png" width="80%" style="margin: 20px;" />
+							<div class="row" style="text-align: left;">
+								<div class="col-60">
+									<h1 style="font-weight: 400;margin: 10px 0;">福州龙泉山庄</h1>
+									<p style="margin-top:10px;" class="hidden">地址：南岭镇双龙村（福州黎明学院附近往北走300米再倒退300米</p>
+									<p style="margin-top:10px;" class="hidden">评分：
+										<img src="imgs/star.png" style="width: 1rem;" />
+										<img src="imgs/star.png" style="width: 1rem;" />
+										<img src="imgs/star.png" style="width: 1rem;" />
+										<img src="imgs/star.png" style="width: 1rem;" />
+										<img src="imgs/stargray.png" style="width: 1rem;" />
+
+									</p>
+								</div>
+								<div class="col-40" style="margin-top: 20px;">
+									<img src="imgs/龙泉山庄.jpg" style="width: 100%" />
+								</div>
+							</div>
+						</a>
+						<!--幸福庄园-->
+						<div class="row" style="text-align: left;margin-top: 25px;">
+							<div class="col-60">
+								<h1 style="font-weight: 400;margin: 3px;">幸福庄园</h1>
+								<p style="margin-top:10px;" class="hidden">地址：清凉镇北斗村1号</p>
+								<p style="margin-top:10px;" class="hidden">评分：
+									<img src="imgs/star.png" style="width: 1rem;" />
+									<img src="imgs/star.png" style="width: 1rem;" />
+									<img src="imgs/star.png" style="width: 1rem;" />
+									<img src="imgs/star.png" style="width: 1rem;" />
+									<img src="imgs/stargray.png" style="width: 1rem;" />
+
+								</p>
+							</div>
+							<div class="col-40" style="margin-top: 20px;">
+								<img src="imgs/幸福庄园.jpg" style="width: 100%" />
+							</div>
+						</div>
+					</div>
+
+					<!--当季游记-->
+					<div class="content-block">
+						<div class="swiper-container swiper-container2" data-space-between='10' data-autoplay="2000" data-loop="true">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="content-block-title">
+										<h1 style="font-weight: 400;">当季游记 | 去感受一下田园风光</h1>
+									</div>
+									<div class="card facebook-card" style="box-shadow: none;">
+
+										<div class="card-content"><img src="./imgs/晋安.png" width="100%"></div>
+										<p style="font-size: 1.3rem;color:black;">晋安————我为枫叶，越岭而来，却只得一片丹青书墨</p>
+										<div class="card-footer">
+
+											<a href="#" class="link">
+												<img src="./imgs/tou1.png" style="width: 1.5rem;" />Laurina 在晋安
+											</a>
+											<a href="#" class="link">10100 浏览 · 7890 回复</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="swiper-slide">
+									<div class="content-block-title">
+										<h1 style="font-weight: 400;">当季游记 | 去感受一下鼓山风光</h1>
+									</div>
+									<div class="card facebook-card" style="box-shadow: none;">
+
+										<div class="card-content"><img src="./imgs/鼓山.png" width="100%"></div>
+										<p style="font-size: 1.2rem;color:black;">鼓山————我为枫叶，越岭而来，却只得一片丹青书墨</p>
+										<div class="card-footer">
+
+											<a href="#" class="link">
+												<img src="./imgs/tou1.png" style="width: 2rem;/>&#x3000;Laurina 在晋安
+											</a>
+											<a href=" # " class="link ">10100 浏览 · 7890 回复</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+					
+					<!--浮潜，草坪婚礼-->
+					<div class="content-block " style="padding-top: 20px;margin-top: 20px; ">
+						<div class="card facebook-card " style="box-shadow: none; ">
+
+							<div class="card-content row ">
+								<div class="col-60 ">
+									<h2>还不会浮潜？这边文章教程一定要看</h2>
+								<p style="margin-top:10px; " class="hidden2 ">关于浮潜，你了解多少呢，也许你会认为：浮潜就是使用面关于浮潜，你了解多少呢，也许你会认为：浮潜就是使用面</p>
+								</div>
+								<div class="col-40 ">
+									<img src="./imgs/qianshui.jpg " width="100% "/>
+								</div>
+							</div>
+										
+							<div class="card-footer ">
+
+								<a href="# " class="link " style="line-height: 1rem; ">
+									<span style="border: 1px solid red;color: red;border-radius: 6px;padding: 2px;font-size: 0.5rem; ">
+										攻略
+									</span>
+								</a>
+								<a href="# " class="link ">10100 浏览 · 7890 回复</a>
+							</div>
+						</div>
+									
+						<div class="card facebook-card " style="box-shadow: none; ">
+
+							<div class="card-content row ">
+								<div class="col-60 ">
+									<h2>草坪婚礼</h2>
+									<p style="margin-top:10px; " class="hidden2 ">草坪婚礼，给你清新自然的婚礼，愿你的幸福一直到老，长长久久美美满满</p>
+								</div>
+								<div class="col-40 ">
+									<img src="./imgs/merry.jpg " width="100% "/>
+								</div>
+							</div>
+										
+							<div class="card-footer ">
+
+								<a href="# " class="link " style="line-height: 1rem; ">
+									<span style="border: 1px solid red;color: red;border-radius: 6px;padding: 2px;font-size: 0.5rem; ">
+										攻略
+									</span>
+								</a>
+								<a href="# " class="link ">10100 浏览 · 7890 回复</a>
+							</div>
+						</div>
+											
+					</div>
+					
+				</div>
+				<!--content-->
+			</div>
+			<!--page->
+		</div><!--page-group-->
+
+			<script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+				
+			<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+			<script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+			<script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+
+			<script type="text/javascript ">
+				
+				
+				$.init();
+				<!--location.reload()-->
+			</script>
+			<!--<script src="jquery-3.3.1.js"></script>-->
+	</body>
+
+</html>
